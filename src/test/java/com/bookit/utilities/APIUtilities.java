@@ -9,7 +9,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 public class APIUtilities {
 
-    private  String URI=ConfigurationReader.getProperty("bookit.uri.qa1");
+    private  String URI=ConfigurationReader.getProperty("bookit.api.qa1");
     /**
      * Method that generates access token
      * @return bearer token
@@ -26,7 +26,7 @@ public class APIUtilities {
      * Method that generates access token
      * @return bearer token
      */
-    public static String getTokenForBookit(String role){
+    public static String getToken(String role){
         String userName = "";
         String password = "";
         if (role.toLowerCase().contains("lead")) {
