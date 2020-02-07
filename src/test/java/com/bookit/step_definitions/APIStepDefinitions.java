@@ -10,6 +10,7 @@ import io.restassured.response.Response;
 import org.junit.Assert;
 
 import java.util.List;
+import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 
@@ -59,4 +60,10 @@ public class APIStepDefinitions {
      * Any number in cucumber test step, becomes step definition (variable)
      * By changing this number, you are not changing a content of test step
      */
+    @When("user sends POST request to {string} with following information:")
+    public void user_sends_POST_request_to_with_following_information(String path,List<Map<String,String>> students) {
+       for(Map<String,String> student:students){
+
+       }
+    }
 }
